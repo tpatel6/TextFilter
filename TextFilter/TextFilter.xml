@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TextFilter</name>
+    </assembly>
+    <members>
+        <member name="T:TextFilter.Interfaces.ITextFilter">
+            <summary>
+            Text filter interface.
+            </summary>
+        </member>
+        <member name="M:TextFilter.Interfaces.ITextFilter.Apply(System.String)">
+            <summary>
+            Applies a filter to the text.
+            </summary>
+            <param name="text">Original text to be filtered.</param>
+            <returns>Filtered text.</returns>
+        </member>
+        <member name="T:TextFilter.Program">
+            <summary>
+            Program class containing entrypoint to application.
+            </summary>
+        </member>
+        <member name="M:TextFilter.Program.Main">
+            <summary>
+            Entrypoint to application.
+            Reads a local file, applies a series of text filters to the text in the file.
+            Outputs the filtered text onto the console.
+            </summary>
+        </member>
+        <member name="T:TextFilter.Services.WordFilter">
+            <summary>
+            Filters words in a provided string.
+            </summary>
+        </member>
+        <member name="M:TextFilter.Services.WordFilter.#ctor(System.Func{System.String,System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:TextFilter.Services.WordFilter"/> class.
+            </summary>
+            <param name="filter">Filter to applied to words.</param>
+        </member>
+        <member name="M:TextFilter.Services.WordFilter.Apply(System.String)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TextFilter.UnitTests</name>
+    </assembly>
+    <members>
+        <member name="T:TextFilter.UnitTest.WordFilterTests">
+            <summary>
+            Unit tests for the <see cref="T:TextFilter.Services.WordFilter"/> service.
+            </summary>
+        </member>
+        <member name="M:TextFilter.UnitTest.WordFilterTests.ThrowsNullException_WhenConstructedWithNullFilter">
+            <summary>
+            The constructor <see cref="M:TextFilter.Services.WordFilter.#ctor(System.Func{System.String,System.String})"/> will throw an exception if passed a null delegate.
+            </summary>
+        </member>
+        <member name="M:TextFilter.UnitTest.WordFilterTests.AppliesFunctionPassedToConstructorToEachWordInText_WhenApplyMethodIsCalled(System.String,System.String)">
+            <summary>
+            Shows that the apply method will only apply the filter delegate to each word in the initial string.
+            Shows that punctuation and whitespace is left invariant by the word filter.
+            Shows that numerals are treated as words.
+            </summary>
+            <param name="initialString">The initial string.</param>
+            <param name="expectedString">The expected filtered string.</param>
+        </member>
+    </members>
+</doc>
