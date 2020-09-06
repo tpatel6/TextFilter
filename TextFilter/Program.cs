@@ -5,6 +5,7 @@
 namespace TextFilter
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
     using TextFilter.Interfaces;
     using TextFilter.Services;
@@ -21,15 +22,21 @@ namespace TextFilter
         /// </summary>
         public static void Main()
         {
-            string text = File.ReadAllText("TextFile1.txt");
+            string text = File.ReadAllText("SampleText.txt");
 
-            static string Filter(string text) => text;
+            var filters = new List<ITextFilter>
+            {
+                new WordFilter(WordFilterHelpers.FilterWordsWithAVowelInTheMiddle),
+                new WordFilter(WordFilterHelpers.FilterWordsLessThan3Characters),
+                new WordFilter(WordFilterHelpers.FilterWordsContainingLowercaseT),
+            };
 
-            ITextFilter textFilter = new WordFilter(Filter);
+            foreach (var textFilter in filters)
+            {
+                text = textFilter.Apply(text);
+            }
 
-            string filteredText = textFilter.Apply(text);
-
-            Console.WriteLine(filteredText);
+            Console.WriteLine(text);
         }
     }
 }

@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextFilter", "TextFilter\TextFilter.csproj", "{1E404D05-533C-499D-B9F6-61FB709F3203}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextFilter.UnitTests", "TextFilter.UnitTests\TextFilter.UnitTests.csproj", "{DE35A79B-2581-4EC8-BA5B-959B0648BD8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextFilter.UnitTests", "TextFilter.UnitTests\TextFilter.UnitTests.csproj", "{DE35A79B-2581-4EC8-BA5B-959B0648BD8E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{78A05EC8-B672-4D27-A716-B3A114BA9B00}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global

@@ -10,8 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="SampleText.txt" />
     <None Remove="stylecop.json" />
-    <None Remove="TextFile1.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="TextFile1.txt">
+    <Content Include="SampleText.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

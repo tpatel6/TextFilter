@@ -4,6 +4,74 @@
         <name>TextFilter.UnitTests</name>
     </assembly>
     <members>
+        <member name="T:TextFilter.UnitTests.Services.WordFilterHelperTests">
+            <summary>
+            Unit tests for <see cref="T:TextFilter.Services.WordFilterHelpers"/>.
+            </summary>
+        </member>
+        <member name="M:TextFilter.UnitTests.Services.WordFilterHelperTests.FilterWordsWithAVowelInTheMiddle_ThrowsNullException_WhenCalledWithNullString">
+            <summary>
+            <see cref="M:TextFilter.Services.WordFilterHelpers.FilterWordsWithAVowelInTheMiddle(System.String)"/> throws a null argumnet exception when called with null.
+            </summary>
+        </member>
+        <member name="M:TextFilter.UnitTests.Services.WordFilterHelperTests.FilterWordsWithAVowelInTheMiddle_ReturnsWord_IfWordHasNoVowelInMiddle_AndWordLengthIsEven(System.String)">
+            <summary>
+            Returns the word if called on even length words with no vowels in the middle two characters.
+            </summary>
+            <param name="word">The word to be filtered.</param>
+        </member>
+        <member name="M:TextFilter.UnitTests.Services.WordFilterHelperTests.FilterWordsWithAVowelInTheMiddle_ReturnsWord_IfWordHasNoVowelInMiddle_AndWordLengthIsOdd(System.String)">
+            <summary>
+            Returns the word if called on odd length words with no vowels in the middle character.
+            </summary>
+            <param name="word">The word to be filtered.</param>
+        </member>
+        <member name="M:TextFilter.UnitTests.Services.WordFilterHelperTests.FilterWordsWithAVowelInTheMiddle_ReturnsEmptyString_IfWordHasVowelInMiddle_AndWordLengthIsEven(System.String)">
+            <summary>
+            Returns an empty string if called on even length words with a vowel in the middle two characters.
+            </summary>
+            <param name="word">The word to be filtered.</param>
+        </member>
+        <member name="M:TextFilter.UnitTests.Services.WordFilterHelperTests.FilterWordsWithAVowelInTheMiddle_ReturnsEmptyString_IfWordHasVowelInMiddle_AndWordLengthIsOdd(System.String)">
+            <summary>
+            Returns an empty string if called on odd length words with a vowel in the middle character.
+            </summary>
+            <param name="word">The word to be filtered.</param>
+        </member>
+        <member name="M:TextFilter.UnitTests.Services.WordFilterHelperTests.FilterWordsLessThan3Characters_ThrowsNullException_WhenCalledWithNullString">
+            <summary>
+            <see cref="M:TextFilter.Services.WordFilterHelpers.FilterWordsLessThan3Characters(System.String)"/> throws a null argumnet exception when called with null.
+            </summary>
+        </member>
+        <member name="M:TextFilter.UnitTests.Services.WordFilterHelperTests.FilterWordsWithLessThanThreeCharacters_ReturnsEmptyString_IfWordHasLessThanThreeCharacters(System.String)">
+            <summary>
+            Returns an empty string if called on string with less than 3 characters.
+            </summary>
+            <param name="word">The word to be filtered.</param>
+        </member>
+        <member name="M:TextFilter.UnitTests.Services.WordFilterHelperTests.FilterWordsWithLessThanThreeCharacters_ReturnsOriginalString_IfWordHasAtLeastThreeCharacters(System.String)">
+            <summary>
+            Returns the string if called on a string with at least 3 characters.
+            </summary>
+            <param name="word">The word to be filtered.</param>
+        </member>
+        <member name="M:TextFilter.UnitTests.Services.WordFilterHelperTests.FilterWordsContainingLowercaseT_ThrowsNullException_WhenCalledWithNullString">
+            <summary>
+            <see cref="M:TextFilter.Services.WordFilterHelpers.FilterWordsContainingLowercaseT(System.String)"/> throws a null argumnet exception when called with null.
+            </summary>
+        </member>
+        <member name="M:TextFilter.UnitTests.Services.WordFilterHelperTests.FilterWordsWithLowercaseT_ReturnsEmptyString_IfWordHasLowercaseT(System.String)">
+            <summary>
+            Returns an empty string if called on string containing 't'.
+            </summary>
+            <param name="word">The word to be filtered.</param>
+        </member>
+        <member name="M:TextFilter.UnitTests.Services.WordFilterHelperTests.FilterWordsWithLowercaseT_ReturnsOrginalString_IfWordDoesNotContainLowercaseT(System.String)">
+            <summary>
+            Returns the original string if called on a string containing 't'.
+            </summary>
+            <param name="word">The word to be filtered.</param>
+        </member>
         <member name="T:TextFilter.UnitTest.WordFilterTests">
             <summary>
             Unit tests for the <see cref="T:TextFilter.Services.WordFilter"/> service.

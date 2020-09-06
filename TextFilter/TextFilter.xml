@@ -42,5 +42,33 @@
         <member name="M:TextFilter.Services.WordFilter.Apply(System.String)">
             <inheritdoc/>
         </member>
+        <member name="T:TextFilter.Services.WordFilterHelpers">
+            <summary>
+            Helper methods to filter words.
+            </summary>
+        </member>
+        <member name="M:TextFilter.Services.WordFilterHelpers.FilterWordsWithAVowelInTheMiddle(System.String)">
+            <summary>
+            Filters words with a vowel in the middle character.
+            If the length of the word is odd, there is only a single middle character to check.
+            If the length of the word if even, there will be a pair of middle characters around the centre.
+            </summary>
+            <param name="word">The word to filter.</param>
+            <returns>The filtered word.</returns>
+        </member>
+        <member name="M:TextFilter.Services.WordFilterHelpers.FilterWordsLessThan3Characters(System.String)">
+            <summary>
+            Filters words with less than 3 characters out.
+            </summary>
+            <param name="word">The word to filter.</param>
+            <returns>The filtered word.</returns>
+        </member>
+        <member name="M:TextFilter.Services.WordFilterHelpers.FilterWordsContainingLowercaseT(System.String)">
+            <summary>
+            Filters words containing the character 't'.
+            </summary>
+            <param name="word">The word to filter.</param>
+            <returns>The filtered word.</returns>
+        </member>
     </members>
 </doc>
